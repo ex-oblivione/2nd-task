@@ -1,7 +1,16 @@
-.text-field {
+.date-dropdown {
   position: relative;
-  width: 320px;
+  display: inline-flex;
+  align-items: center;
+  width: 150px;
   height: 44px;
+  user-select: none;
+
+
+&__input {
+  position: relative;
+  width: inherit;
+  height: inherit;
   box-sizing: border-box;
   border: 1px solid $darkShade25;
   border-radius: 4px;
@@ -12,7 +21,7 @@
   padding-left: 14px;
 
   &::placeholder {
-    color: $darkShade25;
+    color: $darkShade75;
   }
 
   &:focus,
@@ -21,5 +30,13 @@
     border: 1px solid $darkShade50;
     color: $darkShade75;
     transition: 0.2s;
+  }
+  }
+  &__expand-symbol {
+    font-family: "Material Icons";
+    font-size: 24px;
+    color: $darkShade50;
+    right: 10px;
+    position: absolute;
   }
 }
