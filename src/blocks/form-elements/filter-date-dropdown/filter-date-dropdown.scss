@@ -1,0 +1,36 @@
+.filter-date-dropdown {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 320px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid $darkShade25;
+    border-radius: 4px;
+    color: $darkShade75;
+    padding-left: 14px;
+    transition: border-color 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $darkShade50;
+    }
+  }
+
+  &__placeholder {
+    color: $darkShade75;
+  }
+
+  &__expand-symbol {
+    font-family: "Material Icons";
+    font-size: 24px;
+    color: $darkShade50;
+    right: 10px;
+    position: absolute;
+  }
+}

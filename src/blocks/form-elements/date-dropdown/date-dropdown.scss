@@ -6,31 +6,30 @@
   height: 44px;
   user-select: none;
 
-
-&__input {
-  position: relative;
-  width: inherit;
-  height: inherit;
-  box-sizing: border-box;
-  border: 1px solid $darkShade25;
-  border-radius: 4px;
-  color: $darkShade75;
-  font-family: Montserrat-Regular;
-  font-size: 14px;
-  line-height: 18px;
-  padding-left: 14px;
-
-  &::placeholder {
+  &__input {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+    border: 1px solid $darkShade25;
+    border-radius: 4px;
     color: $darkShade75;
-  }
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 14px;
 
-  &:focus,
-  &:hover {
-    outline: none;
-    border: 1px solid $darkShade50;
-    color: $darkShade75;
-    transition: 0.2s;
-  }
+    &::placeholder {
+      color: $darkShade75;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border: 1px solid $darkShade50;
+      color: $darkShade75;
+      transition: 0.2s;
+    }
   }
   &__expand-symbol {
     font-family: "Material Icons";
