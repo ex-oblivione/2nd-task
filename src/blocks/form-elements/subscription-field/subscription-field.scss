@@ -1,0 +1,41 @@
+.subscription-field {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 266px;
+  height: 44px;
+
+  &__placeholder {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+    border: 1px solid $darkShade25;
+    border-radius: 4px;
+    color: $darkShade75;
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 14px;
+    transition: border-color 0.2s linear;
+
+    &::placeholder {
+      color: $darkShade25;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border-color: $darkShade50;
+    }
+  }
+
+  &__arrow-symbol {
+    font-family: "Material Icons";
+    font-size: 24px;
+    color: $purple;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+  }
+}

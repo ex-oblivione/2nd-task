@@ -18,7 +18,7 @@
   &:focus,
   &:hover {
     outline: none;
-    border: 1px solid $darkShade50;
+    border-color: $darkShade50;
     color: $darkShade75;
     transition: 0.2s;
   }
