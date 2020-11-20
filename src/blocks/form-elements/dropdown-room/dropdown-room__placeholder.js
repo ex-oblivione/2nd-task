@@ -1,0 +1,1 @@
+$('.dropdown-room__placeholder').text('Выберете из списка');

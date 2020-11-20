@@ -1,0 +1,94 @@
+.dropdown-room {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 266px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid $darkShade25;
+    border-radius: 4px;
+    color: $darkShade75;
+    padding-left: 14px;
+    transition: border-color 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $darkShade50;
+    }
+  }
+
+  &__btn.active-dropdown {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-color: $darkShade50;
+  }
+
+  &__expand-symbol {
+    font-family: "Material Icons";
+    font-size: 24px;
+    color: $darkShade50;
+    right: 10px;
+    position: absolute;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 119px;
+    border: 1px solid $darkShade50;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top: 0;
+    background-color: white;
+    // возможно он лишний
+    z-index: 1;
+    box-sizing: border-box;
+    font-family: Montserrat-Bold;
+    font-size: 12px;
+  }
+
+  &__content.active-dropdown {
+    display: block;
+  }
+
+  &__content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 7px 7px 0 14px;
+    box-sizing: border-box;
+  }
+
+  &__content-counter {
+    width: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content-counter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $darkShade25;
+    color: $darkShade25;
+    box-sizing: border-box;
+    border-radius: 50%;
+    font-family: Montserrat-Regular;
+    font-size: 18px;
+    cursor: pointer;
+    &[data-direction="plus"] {
+      border: 1px solid $darkShade50;
+      color: $darkShade50;
+    }
+  }
+}
