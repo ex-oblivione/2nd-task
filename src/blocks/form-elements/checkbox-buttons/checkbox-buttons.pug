@@ -1,10 +1,6 @@
-h3.title CHECKBOX BUTTONS
-label.checkbox-line
-  include checkbox-item
-  span.checkbox-text Можно курить
-label.checkbox-line
-  include checkbox-item
-  span.checkbox-text Можно с питомцами
-label.checkbox-line
-  include checkbox-item
-  span.checkbox-text Можно пригласить гостей (до 10 человек)
+include ./checkbox-item
+.cont
+  h3.title CHECKBOX BUTTONS
+  +checkbox-btn({text: 'Можно курить'})
+  +checkbox-btn({text: 'Можно с питомцами'})
+  +checkbox-btn({text: 'Можно пригласить гостей (до 10 человек)'})
