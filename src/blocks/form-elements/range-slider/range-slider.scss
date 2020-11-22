@@ -1,0 +1,84 @@
+.range-slider {
+  position: relative;
+  // Что это?
+  width: 50%;
+  max-width: 266px;
+
+  &__stylized {
+    position: relative;
+    z-index: 1;
+    height: 6px;
+    margin: 0 15px;
+  }
+
+  &__track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $darkShade25;
+  }
+
+  &__range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    // border-radius: 3px;
+    background-color: $green;
+  }
+
+  &__thumb {
+    position: absolute;
+    z-index: 3;
+    width: 12px;
+    height: 12px;
+    background-color: $green;
+    border: 2px solid white;
+    border-radius: 50%;
+    // box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.1);
+    // transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+.thumb-left {
+  left: 25%;
+  // Положение круглого ползунка на линии (возможно придется корректировать)
+  transform: translate(-8px, -5px);
+}
+
+.thumb-right {
+  right: 25%;
+  // Положение круглого ползунка на линии (возможно придется корректировать)
+  transform: translate(8px, -5px);
+}
+
+.range-slider__input {
+  position: absolute;
+  //  Что это
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 2;
+  height: 6px;
+  width: 100%;
+  opacity: 0;
+}
+
+// Что это? Видимо, для проверки
+.range-slider__input::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  border: 0 none;
+  background-color: red;
+  -webkit-appearance: none;
+}
+
+// https://www.youtube.com/watch?v=pTlsnFLiK6c&ab_channel=MinzCode
