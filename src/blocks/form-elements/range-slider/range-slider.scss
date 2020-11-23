@@ -1,14 +1,33 @@
 .range-slider {
   position: relative;
   // Что это?
-  width: 50%;
-  max-width: 266px;
+  max-width: 288px;
+
+  &__text {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 11px 23px 11px;
+  }
+
+  &__text-price {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__text-left {
+    color: $darkShade50;
+  }
+
+  &__text-right {
+    color: $darkShade50;
+  }
 
   &__stylized {
     position: relative;
     z-index: 1;
     height: 6px;
-    margin: 0 15px;
+    margin: 0 11px;
   }
 
   &__track {
@@ -48,18 +67,17 @@
 }
 
 .thumb-left {
-  left: 25%;
   // Положение круглого ползунка на линии (возможно придется корректировать)
   transform: translate(-8px, -5px);
 }
 
 .thumb-right {
-  right: 25%;
   // Положение круглого ползунка на линии (возможно придется корректировать)
   transform: translate(8px, -5px);
 }
 
 .range-slider__input {
+  // top: 40px;
   position: absolute;
   //  Что это
   pointer-events: none;
@@ -70,11 +88,10 @@
   opacity: 0;
 }
 
-// Что это? Видимо, для проверки
 .range-slider__input::-webkit-slider-thumb {
   pointer-events: all;
-  width: 30px;
-  height: 30px;
+  width: 19px;
+  height: 19px;
   border-radius: 0;
   border: 0 none;
   background-color: red;
