@@ -1,6 +1,5 @@
 .range-slider {
   position: relative;
-  // Что это?
   max-width: 288px;
 
   &__text {
@@ -49,7 +48,7 @@
     right: 25%;
     top: 0;
     bottom: 0;
-    // border-radius: 3px;
+    border-radius: 3px;
     background-color: $green;
   }
 
