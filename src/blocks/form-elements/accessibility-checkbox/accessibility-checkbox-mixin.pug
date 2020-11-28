@@ -1,0 +1,10 @@
+mixin accessibility-checkbox-mixin(options)
+    label.checkbox-line
+    label.checkbox
+      input.checkbox__input(
+        type='checkbox'
+      )
+      span.checkbox__box
+      .check
+        span.checkbox-text.checkbox-text_access= options.text || 'accessibility-checkbox text'
+        span.checkbox-text.checkbox-text_access-caption!= options.caption || 'accessibility-checkbox caption'

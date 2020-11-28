@@ -1,0 +1,22 @@
+.accessibility-checkbox {
+  width: 255px;
+
+  &__title {
+    margin-bottom: 7px;
+  }
+}
+
+.checkbox-text_access {
+  font-family: Montserrat-Bold;
+  font-weight: bold;
+  font-size: 14px;
+  color: $darkShade75;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.checkbox-text_access-caption {
+  font-size: 12px;
+  line-height: 14px;
+  display: block;
+}
