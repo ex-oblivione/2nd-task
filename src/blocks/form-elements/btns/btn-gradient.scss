@@ -1,0 +1,23 @@
+.btn-gradient {
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 99px;
+  height: 44px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &__text {
+    position: relative;
+    color: white;
+  }
+}
