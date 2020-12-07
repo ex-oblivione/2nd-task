@@ -1,0 +1,25 @@
+.find-room
+  p Найдем номера под ваши пожелания
+  .date-dropdown__container
+    div
+      p Прибытие
+      //- .datepicker-here
+      .date-dropdown
+        input.date-dropdown__input.date-dropdown-mask(
+          type='text'
+          class="datepicker-here"
+          id='start_one'
+          data-range="true" data-multiple-dates-separator=" - "
+          readonly
+        )
+        span.date-dropdown__expand-symbol expand_more
+
+    div
+      p Выезд
+      .date-dropdown
+        input.date-dropdown__input.date-dropdown-mask(
+          type='text'
+          id='end_one'
+          readonly
+        )
+        span.date-dropdown__expand-symbol expand_more

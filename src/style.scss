@@ -19,6 +19,8 @@
 @import "./blocks/form-elements/btns/btn-gradient.scss";
 @import "./blocks/form-elements/btns/btn-gradient_border.scss";
 @import "./blocks/form-elements/btns/btn-gradient_wide.scss";
+@import "./blocks/form-elements/date-dropdown/calendar.scss";
+@import "./blocks/components/find-room/find-room.scss";
 
 @font-face {
   font-family: "Montserrat-Regular";
@@ -66,32 +68,3 @@ a {
 li {
   list-style: none;
 }
-
-// Осталось от тестовой версии для наройки вебпака
-// $bg-color: #ffebcd;
-
-// body {
-//   background-color: $bg-color;
-//   font-family: "Montserrat-Regular";
-// }
-
-// *,
-// *::before,
-// *::after {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: inherit;
-// }
-
-// html {
-//   font-size: 62.5%;
-// }
-
-// body {
-//   box-sizing: border-box;
-// }
-
-// span {
-//   margin: 0;
-//   padding: 0;
-// }
