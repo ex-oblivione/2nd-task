@@ -75,7 +75,7 @@
 .datepicker--cell.-current- {
   // color: #4eb5e6;
   color: white;
-  background-color: $green;
+  background: linear-gradient(180deg, $green 0%, #66d2ea 100%);
   border-radius: 50%;
 }
 .datepicker--cell.-current-.-focus- {
@@ -98,7 +98,7 @@
 .datepicker--cell.-in-range-.-focus- {
   // background-color: rgba(92, 196, 239, 0.2);
   // Цвет клеток между выбранными датами при наведении курсора
-  background-color: rgba(92, 196, 239, 0.1);
+  background-color: rgba(188, 156, 255, 0.25);
 }
 
 .datepicker--cell.-disabled- {
@@ -300,7 +300,8 @@
 .datepicker {
   background: #fff;
   border: 1px solid #dbdbdb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  // Убрать тень вокруг календаря
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   box-sizing: content-box;
   // Шрифт
@@ -369,67 +370,67 @@
   display: none;
 }
 
-.datepicker--pointer {
-  position: absolute;
-  background: #fff;
-  border-top: 1px solid #dbdbdb;
-  border-right: 1px solid #dbdbdb;
-  width: 10px;
-  height: 10px;
-  z-index: -1;
-}
-.-top-left- .datepicker--pointer,
-.-top-center- .datepicker--pointer,
-.-top-right- .datepicker--pointer {
-  top: calc(100% - 4px);
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-.-right-top- .datepicker--pointer,
-.-right-center- .datepicker--pointer,
-.-right-bottom- .datepicker--pointer {
-  right: calc(100% - 4px);
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-.-bottom-left- .datepicker--pointer,
-.-bottom-center- .datepicker--pointer,
-.-bottom-right- .datepicker--pointer {
-  bottom: calc(100% - 4px);
-  -webkit-transform: rotate(315deg);
-  transform: rotate(315deg);
-}
-.-left-top- .datepicker--pointer,
-.-left-center- .datepicker--pointer,
-.-left-bottom- .datepicker--pointer {
-  left: calc(100% - 4px);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.-top-left- .datepicker--pointer,
-.-bottom-left- .datepicker--pointer {
-  left: 10px;
-}
-.-top-right- .datepicker--pointer,
-.-bottom-right- .datepicker--pointer {
-  right: 10px;
-}
-.-top-center- .datepicker--pointer,
-.-bottom-center- .datepicker--pointer {
-  left: calc(50% - 10px / 2);
-}
-.-left-top- .datepicker--pointer,
-.-right-top- .datepicker--pointer {
-  top: 10px;
-}
-.-left-bottom- .datepicker--pointer,
-.-right-bottom- .datepicker--pointer {
-  bottom: 10px;
-}
-.-left-center- .datepicker--pointer,
-.-right-center- .datepicker--pointer {
-  top: calc(50% - 10px / 2);
-}
+// .datepicker--pointer {
+//   position: absolute;
+//   background: #fff;
+//   border-top: 1px solid #dbdbdb;
+//   border-right: 1px solid #dbdbdb;
+//   width: 10px;
+//   height: 10px;
+//   z-index: -1;
+// }
+// .-top-left- .datepicker--pointer,
+// .-top-center- .datepicker--pointer,
+// .-top-right- .datepicker--pointer {
+//   top: calc(100% - 4px);
+//   -webkit-transform: rotate(135deg);
+//   transform: rotate(135deg);
+// }
+// .-right-top- .datepicker--pointer,
+// .-right-center- .datepicker--pointer,
+// .-right-bottom- .datepicker--pointer {
+//   right: calc(100% - 4px);
+//   -webkit-transform: rotate(225deg);
+//   transform: rotate(225deg);
+// }
+// .-bottom-left- .datepicker--pointer,
+// .-bottom-center- .datepicker--pointer,
+// .-bottom-right- .datepicker--pointer {
+//   bottom: calc(100% - 4px);
+//   -webkit-transform: rotate(315deg);
+//   transform: rotate(315deg);
+// }
+// .-left-top- .datepicker--pointer,
+// .-left-center- .datepicker--pointer,
+// .-left-bottom- .datepicker--pointer {
+//   left: calc(100% - 4px);
+//   -webkit-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+// .-top-left- .datepicker--pointer,
+// .-bottom-left- .datepicker--pointer {
+//   left: 10px;
+// }
+// .-top-right- .datepicker--pointer,
+// .-bottom-right- .datepicker--pointer {
+//   right: 10px;
+// }
+// .-top-center- .datepicker--pointer,
+// .-bottom-center- .datepicker--pointer {
+//   left: calc(50% - 10px / 2);
+// }
+// .-left-top- .datepicker--pointer,
+// .-right-top- .datepicker--pointer {
+//   top: 10px;
+// }
+// .-left-bottom- .datepicker--pointer,
+// .-right-bottom- .datepicker--pointer {
+//   bottom: 10px;
+// }
+// .-left-center- .datepicker--pointer,
+// .-right-center- .datepicker--pointer {
+//   top: calc(50% - 10px / 2);
+// }
 
 .datepicker--body {
   display: none;

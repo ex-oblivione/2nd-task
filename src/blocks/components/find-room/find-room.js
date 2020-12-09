@@ -1,3 +1,4 @@
+// Передать вторую дату во второй инпут
 $('#start_one').datepicker({
   onSelect: function (fd, d, picker) {
     $("#start_one").val(fd.split("-")[0]);

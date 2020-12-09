@@ -27,7 +27,8 @@
         keyboardNav: true,
 
         position: 'bottom left',
-        offset: 12,
+        // offset: 12,
+        offset: 6,
 
         view: 'days',
         minView: 'days',
@@ -40,7 +41,9 @@
         selectOtherYears: true,
         moveToOtherYearsOnSelect: true,
 
-        minDate: '',
+        // minDate: '',
+        // Начальная дата - сегодняшняя
+        minDate: new Date(),
         maxDate: '',
         disableNavWhenOutOfRange: true,
 
@@ -592,7 +595,8 @@
         this.silent = true;
         this.view = this.opts.minView;
         this.silent = false;
-        this.date = new Date();
+        // При нажатии на Применить (бывшая кнопка - Сегодня), не происходит переключение на сегодняшнюю дату
+        // this.date = new Date();
 
         if (this.opts.todayButton instanceof Date) {
           this.selectDate(this.opts.todayButton)
@@ -1134,7 +1138,8 @@
 
       _onBlur: function () {
         if (!this.inFocus && this.visible) {
-          this.hide();
+          // Отмена закрытия календаря по клику на пустом пространстве (закрыть можно только по кнопке Применить)
+          // this.hide();
         }
       },
 
