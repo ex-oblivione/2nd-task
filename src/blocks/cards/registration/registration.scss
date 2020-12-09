@@ -1,0 +1,35 @@
+.registration {
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__name-form {
+    padding-bottom: 10px;
+  }
+
+  &__sex {
+    padding-bottom: 26px;
+  }
+
+  &__birth-date {
+    padding-bottom: 22px;
+  }
+
+  &__subtitle {
+    padding-bottom: 6px;
+  }
+
+  &__special-offer-toggle {
+    padding-bottom: 24px;
+  }
+
+  &__pay-btn {
+    padding-bottom: 30px;
+  }
+
+  &__login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

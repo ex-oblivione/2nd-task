@@ -1,4 +1,5 @@
-input.text-field(
-  type='text'
-  placeholder='Email'
-)
+mixin text-field(options)
+  input.text-field(
+    type='text'
+    placeholder= options.placeholder
+  )

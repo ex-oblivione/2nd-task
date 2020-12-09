@@ -1,6 +1,6 @@
 @import "./common-styles/color.scss";
 @import "./common-styles/text.scss";
-@import "./blocks/components/header.scss";
+@import "./blocks/cards/header.scss";
 @import "./blocks/form-elements/text-field/text-field.scss";
 @import "./blocks/form-elements/checkbox-buttons/checkbox-item.scss";
 @import "./blocks/form-elements/checkbox-buttons/checkbox-buttons.scss";
@@ -17,10 +17,11 @@
 @import "./blocks/form-elements/expand-checkbox-list/expand-checkbox-list.scss";
 @import "./blocks/form-elements/accessibility-checkbox/accessibility-checkbox.scss";
 @import "./blocks/form-elements/btns/btn-gradient.scss";
-@import "./blocks/form-elements/btns/btn-gradient_border.scss";
 @import "./blocks/form-elements/btns/btn-gradient_wide.scss";
 @import "./blocks/form-elements/date-dropdown/calendar.scss";
-@import "./blocks/components/find-room/find-room.scss";
+@import "./blocks/cards/card-container.scss";
+@import "./blocks/cards/find-room/find-room.scss";
+@import "./blocks/cards/registration/registration.scss";
 
 @font-face {
   font-family: "Montserrat-Regular";

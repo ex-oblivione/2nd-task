@@ -1,0 +1,27 @@
+.registration.card-container
+  p.registration__title.text-style-big Регистрация аккаунта
+  .registration__name-form
+    +text-field({placeholder: 'Имя'})
+  .registration__name-form
+    +text-field({placeholder: 'Фамилия'})
+  .registration__sex
+    include ../../form-elements/radio-buttons/radio-buttons.pug
+  .registration__birth-date
+    p.registration__subtitle.text-style-litle ДАТА РОЖДЕНИЯ
+    include ../../form-elements/masked-text-field/masked-text-field.pug
+  p.registration__subtitle.text-style-litle ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС
+  .registration__name-form
+    +text-field({placeholder: 'Email'})
+  .registration__name-form
+    +text-field({placeholder: 'Пароль'})
+  .registration__special-offer-toggle
+    include ../../form-elements/toggle/toggle.pug
+  .registration__pay-btn
+    a(href='#').btn-gradient.btn-gradient_wide
+      span.btn-gradient__text.text-style-litle ПЕРЕЙТИ К ОПЛАТЕ
+      span.btn-gradient_wide-text arrow_forward
+  .registration__login
+    span Уже есть аккаунт на Toxin
+    //- Потом исправить на кнопку с градиентными границами
+    a(href='#').btn-gradient
+      span.btn-gradient__text.text-style-litle ВОЙТИ
