@@ -52,7 +52,7 @@
         // Изменил с false
         range: true,
 
-        // Нижние кнопки?
+        // Нижние кнопки
         todayButton: true,
         clearButton: true,
 
