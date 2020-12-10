@@ -1,0 +1,40 @@
+.paginator {
+  // Возможно надо будет убрать, если элемент будет центрироваться в блоке
+  width: max-content;
+  text-align: center;
+
+  &__list {
+    user-select: none;
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  &__page {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: $darkShade50;
+    cursor: pointer;
+
+    &_active {
+      color: white;
+      font-weight: 700;
+      background: linear-gradient(180deg, $purple, #8ba4f9);
+    }
+
+    &_arrow {
+      font-family: "Material icons";
+      background: linear-gradient(180deg, $green, #66d2ea);
+      color: white;
+      font-size: 24px;
+    }
+  }
+
+  &__caption {
+    color: $darkShade75;
+  }
+}
