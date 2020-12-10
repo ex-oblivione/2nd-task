@@ -1,0 +1,49 @@
+.room-info {
+  max-width: 291px;
+
+  &__item {
+    padding: 19px 17px 19px 0;
+    border-top: 1px solid rgba(31, 32, 65, 0.1);
+
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  &__elem {
+    display: flex;
+    align-items: center;
+  }
+
+  &__elem-icon {
+    font-family: Material Icons;
+    font-size: 48px;
+    line-height: 50px;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#bc9cff),
+      to(#8ba4f9)
+    );
+    background: -o-linear-gradient(top, #bc9cff 0, #8ba4f9 100%);
+    background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    margin-right: 10px;
+  }
+
+  &__elem-text {
+    color: $darkShade100;
+  }
+
+  &__elem-title {
+    font-weight: bold;
+  }
+}
+
+.asd {
+  margin: 40px;
+}

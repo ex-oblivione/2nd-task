@@ -25,6 +25,7 @@
 @import "./blocks/form-elements/btns/btn-gradient-border.scss";
 @import "./blocks/form-elements/paginator/paginator.scss";
 @import "./blocks/form-elements/bullet-list/bullet-list.scss";
+@import "./blocks/form-elements/room-info/room-info.scss";
 
 @font-face {
   font-family: "Montserrat-Regular";
@@ -62,7 +63,7 @@
 * {
   margin: 0;
   padding: 0;
-  color: $darkShade100;
+  color: $darkShade75;
 }
 
 a {
