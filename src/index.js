@@ -1,6 +1,7 @@
 import './style.scss'
 import './assets/images/Logo.jpg'
 import './assets/images/Box.png'
+import './assets/images/avatar-murad.jpg'
 import './blocks/form-elements/masked-text-field/masked-text-field'
 import './blocks/form-elements/like-button/like-button'
 import './blocks/form-elements/dropdown/dropdown'
