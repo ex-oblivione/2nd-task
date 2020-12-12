@@ -1,0 +1,38 @@
+.room-description {
+  width: 380px;
+  box-sizing: border-box;
+  padding: 39px 29px 0;
+
+  &__header {
+    width: 100%;
+    padding-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-number {
+      font-size: 24px;
+      color: $darkShade100;
+    }
+
+    &-type {
+      color: $purple;
+    }
+
+    &-cost {
+      color: $darkShade50;
+
+      &-rubles {
+        font-weight: bold;
+      }
+
+      &-day {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__date {
+    width: 100%;
+  }
+}

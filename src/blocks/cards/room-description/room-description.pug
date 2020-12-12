@@ -1,0 +1,36 @@
+.room-description
+    .room-description__header
+      .room-description__header-title.text-style-litle № 
+        span.room-description__header-number 888 
+        span.room-description__header-type люкс
+      .room-description__header-cost
+        span.room-description__header-cost-rubles 9 990₽ 
+        span.room-description__header-cost-day в сутки
+    .room-description__date
+      .date-dropdown__container
+        div
+          p.find-room__input.text-style-litle Прибытие
+          .date-dropdown
+            input.date-dropdown__input.date-dropdown-mask(
+              type='text'
+              class="datepicker-here"
+              id='start_one'
+              data-range="true" data-multiple-dates-separator=" - "
+              readonly
+            )
+            span.date-dropdown__expand-symbol expand_more
+    
+        div
+          p.find-room__input.text-style-litle Выезд
+          .date-dropdown
+            input.date-dropdown__input.date-dropdown-mask(
+              type='text'
+              id='end_one'
+              readonly
+            )
+            span.date-dropdown__expand-symbol expand_more
+
+
+    .room-description__guests
+    .room-description__price
+    .room-description__btn
