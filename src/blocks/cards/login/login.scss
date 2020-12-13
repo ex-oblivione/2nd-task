@@ -1,0 +1,21 @@
+.login {
+  padding-bottom: 32px;
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__field {
+    padding-bottom: 10px;
+  }
+
+  &__btn {
+    padding: 10px 0 30px;
+  }
+
+  &__registration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,16 @@
+.login.card-container
+  p.login__title.text-style-big Войти
+  .login__field
+    +text-field({placeholder: 'Email'})
+  .login__field
+    +text-field({placeholder: 'Пароль'})
+  .login__btn
+    a(href='#').btn-gradient.btn-gradient_wide
+      span.btn-gradient__text.text-style-litle ВОЙТИ
+      span.btn-gradient_wide-text arrow_forward
+  .login__registration
+    span Нет аккаунта на Toxin?
+    a(href='#').btn-gradient-border
+      .btn-gradient-border__inner
+        span.btn-gradient-border__text.text-style-litle СОЗДАТЬ
+
