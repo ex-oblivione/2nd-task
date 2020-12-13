@@ -1,7 +1,7 @@
 .find-room.card-container
   p.find-room__title.text-style-big Найдём номера под ваши пожелания
   .date-dropdown__container
-    div
+    .date-dropdown__column
       p.find-room__input.text-style-litle Прибытие
       //- Для постоянного отображения календаря
       //- .datepicker-here
@@ -15,7 +15,7 @@
         )
         span.date-dropdown__expand-symbol expand_more
 
-    div
+    .date-dropdown__column
       p.find-room__input.text-style-litle Выезд
       .date-dropdown
         input.date-dropdown__input.date-dropdown-mask(

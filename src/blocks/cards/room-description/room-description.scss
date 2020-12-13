@@ -1,7 +1,8 @@
 .room-description {
   width: 380px;
   box-sizing: border-box;
-  padding: 39px 29px 0;
+  padding: 43px 29px 30px;
+  border-radius: 4px;
 
   &__header {
     width: 100%;
@@ -9,6 +10,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &-title {
+      font-size: 14px;
+    }
 
     &-number {
       font-size: 24px;
@@ -34,5 +39,63 @@
 
   &__date {
     width: 100%;
+    padding-bottom: 2px;
+  }
+
+  &__guests {
+    padding-bottom: 12px;
+  }
+
+  &__price {
+    width: 100%;
+    padding-bottom: 14px;
+
+    &-cell {
+      vertical-align: top;
+      padding: 7px 0;
+      display: flex;
+      justify-content: space-between;
+      width: 239px;
+      line-height: 18px;
+
+      &-right {
+        text-align: right;
+        vertical-align: top;
+        padding: 7px 0;
+        line-height: 18px;
+      }
+
+      &-dots {
+        flex-grow: 1;
+        border-bottom: 1px dotted $darkShade25;
+        margin-left: 5px;
+      }
+    }
+
+    &-foot {
+      font-size: 19px;
+
+      &-wrapper {
+        padding-top: 17px;
+      }
+    }
+  }
+}
+
+.price-cell-info {
+  position: relative;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid $darkShade25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  &-text {
+    color: $darkShade25;
+    font-weight: bold;
   }
 }

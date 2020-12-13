@@ -84,7 +84,8 @@ let counter = function () {
         value.textContent = newValue;
 
         // Создаем массив из всех счетчиков.
-        let valuesArr = Array.from(document.querySelectorAll('.dropdown__content-counter-value'));
+        // let valuesArr = Array.from(document.querySelectorAll('.dropdown__content-counter-value'));
+        let valuesArr = Array.from(this.parentElement.parentElement.parentElement.querySelectorAll('.dropdown__content-counter-value'));
 
         // Находим сумму гостей (взрослых и детей).
         let guestsSum = +valuesArr[0].textContent + +valuesArr[1].textContent;
@@ -140,7 +141,8 @@ let counter = function () {
         }
 
         // Выводим получившуюся строку на страницу.
-        let counterPlaceholderText = document.body.querySelector('.dropdown__placeholder');
+        // let counterPlaceholderText = document.body.querySelector('.dropdown__placeholder');
+        let counterPlaceholderText = this.parentElement.parentElement.parentElement.parentElement.querySelector('.dropdown__placeholder');
         counterPlaceholderText.textContent = counterText();
       })
   })

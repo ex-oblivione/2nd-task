@@ -8,7 +8,7 @@
         span.room-description__header-cost-day в сутки
     .room-description__date
       .date-dropdown__container
-        div
+        .date-dropdown__column
           p.find-room__input.text-style-litle Прибытие
           .date-dropdown
             input.date-dropdown__input.date-dropdown-mask(
@@ -19,8 +19,7 @@
               readonly
             )
             span.date-dropdown__expand-symbol expand_more
-    
-        div
+        .date-dropdown__column
           p.find-room__input.text-style-litle Выезд
           .date-dropdown
             input.date-dropdown__input.date-dropdown-mask(
@@ -30,7 +29,34 @@
             )
             span.date-dropdown__expand-symbol expand_more
 
-
     .room-description__guests
-    .room-description__price
-    .room-description__btn
+      p.text-style-litle.find-room__guests-title Гости
+      include ../../form-elements/dropdown/dropdown.pug
+
+    table.room-description__price
+      tbody.room-description__price-body
+        tr.room-description__price-row
+          td.room-description__price-cell 9 990₽ х 4 суток
+          td.room-description__price-cell-right 39 960₽
+        tr.room-description__price-row
+          td.room-description__price-cell Сбор за услуги: скидка 2 179₽
+            .price-cell-info 
+              span.price-cell-info-text i
+          td.room-description__price-cell-right 0₽
+        tr.room-description__price-row
+          td.room-description__price-cell Сбор за дополнительные<br>услуги
+            .price-cell-info 
+              span.price-cell-info-text i
+          td.room-description__price-cell-right 300₽
+      tfoot.room-description__price-foot.text-style-big
+          tr.room-description__price-row
+            td.room-description__price-cell 
+              .room-description__price-foot-wrapper Итого
+              span.room-description__price-cell-dots
+            td.room-description__price-cell-right
+              .room-description__price-foot-wrapper 38 081₽
+
+    a(href='#').room-description__btn
+      .btn-gradient.btn-gradient_wide
+        span.btn-gradient__text.text-style-litle забронировать
+        span.btn-gradient_wide-text arrow_forward
