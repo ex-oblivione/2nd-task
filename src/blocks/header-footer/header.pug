@@ -1,0 +1,37 @@
+.header
+  .header__container
+    img(src='./assets/images/Logo.jpg').header__logo
+    
+    .header-menu
+      ul.header-menu__list_left
+        li.header-menu__item
+          a.header-menu__link(href="") О нас
+        li.header-menu__item.header-menu__item-submenu
+          a.header-menu__link(href="") Услуги
+          span.header-menu__expand-symbol expand_more
+          ul.header-menu__submenu
+            li.header-menu__submenu-item пашем
+            li.header-menu__submenu-item сеем
+            li.header-menu__submenu-item жнём
+            li.header-menu__submenu-item куём
+
+        li.header-menu__item
+          a.header-menu__link(href="") Вакансии
+        li.header-menu__item
+          a.header-menu__link(href="") Новости
+        li.header-menu__item.header-menu__item-submenu
+          a.header-menu__link(href="") Соглашения
+          span.header-menu__expand-symbol expand_more
+          ul.header-menu__submenu
+            li.header-menu__submenu-item согласен
+            li.header-menu__submenu-item согласен
+            li.header-menu__submenu-item не согласен
+
+      ul.header-menu__list_right
+        li.header-menu__item
+          .btn-gradient-border.header-menu__btn1
+            .btn-gradient-border__inner
+              span.btn-gradient-border__text.text-style-litle ВОЙТИ
+        li.header-menu__item
+          .btn-gradient.header-menu__btn2
+            span.btn-gradient__text.text-style-litle ЗАРЕГИСТРИРОВАТЬСЯ

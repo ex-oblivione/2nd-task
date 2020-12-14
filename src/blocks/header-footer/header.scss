@@ -1,0 +1,88 @@
+.header {
+  align-items: center;
+  // Временный цвет для наглядности
+  background-color: fuchsia;
+
+  &__container {
+    // Временный цвет для наглядности
+    background-color: white;
+    margin: auto;
+    height: 70px;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 105.69px;
+    height: 40px;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+
+    &__list_left {
+      display: flex;
+    }
+
+    &__list_right {
+      display: flex;
+    }
+
+    &__link {
+      color: $darkShade50;
+      &:hover {
+        color: $darkShade75;
+        font-weight: bold;
+      }
+    }
+
+    &__item {
+      position: relative;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+
+      &-submenu:hover .header-menu__submenu {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &__expand-symbol {
+      font-family: "Material Icons";
+      font-size: 24px;
+      color: rgba(31, 32, 65, 0.5);
+    }
+
+    &__submenu {
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      top: 25px;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.2s linear;
+      &-item {
+        color: $darkShade50;
+        padding: 3px;
+        cursor: pointer;
+        &:hover {
+          background-color: $darkShade5;
+        }
+      }
+    }
+
+    &__btn1 {
+      width: 87px;
+      height: 34px;
+    }
+
+    &__btn2 {
+      width: 196px;
+      height: 34px;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 .btn-gradient_wide {
   width: 320px;
 
-  &-text {
+  &::after {
+    content: "arrow_forward";
     position: absolute;
     color: white;
     font-family: "Material Icons";
