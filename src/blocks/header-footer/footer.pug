@@ -1,0 +1,56 @@
+.footer
+  .footer__block-top
+    .footer__container
+      .footer__site-info
+        include ../form-elements/logo-main-page-link/main-page-link.pug
+        p.footer__site-info-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      nav.sitemap
+        ul.sitemap__list
+          li.sitemap__item
+            ul.sitemap__sublist
+              li.sitemap__sublist-item
+                h3 Навигация
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link О нас
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Новости
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Служба поддержки
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Услуги
+          li.sitemap__item
+            ul.sitemap__sublist
+              li.sitemap__sublist-item
+                h3 О нас
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link О сервисе
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Наша команда
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Вакансии
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Инвесторы
+          li.sitemap__item
+            ul.sitemap__sublist
+              li.sitemap__sublist-item
+                h3 Служба поддержки
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Соглашения
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Сообщества
+              li.sitemap__sublist-item
+                a(href='#').sitemap__sublist-link Связь с нами
+          li.sitemap__item
+            ul.sitemap__sublist
+              li.sitemap__sublist-item
+                h3 Подписка
+              li.sitemap__sublist-item Получайте специальные предложения и новости сервиса
+              li.sitemap__sublist-item
+                .sitemap__sublist-item-email
+                  include ../form-elements/subscription-field/subscription-field.pug
+
+  .footer__block-bottom
+    .footer__container
+      p.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
+      .footer__social
+       p.a \f082

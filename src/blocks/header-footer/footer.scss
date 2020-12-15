@@ -1,0 +1,61 @@
+.footer {
+  background-color: white;
+
+  &__block-top {
+    padding: 100px 0 42px;
+  }
+
+  &__container {
+    margin: auto;
+    padding: 0 20px;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__site-info-text {
+    margin-top: 10px;
+    width: 260px;
+  }
+
+  &__block-bottom {
+    border-top: 1px solid $darkShade25;
+    padding: 23px 0;
+  }
+}
+
+.sitemap {
+  margin-top: 6px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1;
+    margin: 0 0 40px 40px;
+  }
+
+  &__sublist {
+    &-item {
+      margin-bottom: 14px;
+
+      &-email {
+        margin-top: 22px;
+      }
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-link {
+      color: $darkShade50;
+    }
+  }
+}
+
+.a {
+  font-family: Font-Awesome-5-Brands;
+}
