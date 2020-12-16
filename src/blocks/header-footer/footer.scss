@@ -56,6 +56,14 @@
   }
 }
 
-.a {
-  font-family: Font-Awesome-5-Brands;
+.footer__social {
+  &-item {
+    margin-left: 23px;
+    font-family: "Font Awesome 5 Brands";
+    font-size: 24px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background-clip: text;
+    -webkit-background-clip: text; /* Обрезаем фон по тексту */
+    -webkit-text-fill-color: transparent; /* Прозрачный текст */
+  }
 }
