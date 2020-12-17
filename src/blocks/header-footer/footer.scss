@@ -52,6 +52,11 @@
 
     &-link {
       color: $darkShade50;
+
+      &:hover {
+        color: $darkShade75;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -65,5 +70,37 @@
     background-clip: text;
     -webkit-background-clip: text; /* Обрезаем фон по тексту */
     -webkit-text-fill-color: transparent; /* Прозрачный текст */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__block-top {
+      padding: 15.6% 0 0;
+    }
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__site-info-text,
+    .sitemap {
+      display: none;
+    }
+
+    &__block-bottom {
+      border-top: none;
+      padding: 11px 0 15.6%;
+    }
+
+    &__copyright {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__social-item:first-child {
+      margin-left: 0;
+    }
   }
 }
