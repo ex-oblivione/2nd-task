@@ -1,4 +1,7 @@
 let btnsRoomSlider = document.querySelectorAll('.slider__control');
+// Псевдомассив кружочков-индикаторов слайдера
+let roomSliderIndicators = document.querySelectorAll('.slider__indicator-item');
+
 
 
 btnsRoomSlider.forEach(btnsRoomSlider => {
@@ -20,7 +23,7 @@ btnsRoomSlider.forEach(btnsRoomSlider => {
       index = (index + slides.length) % slides.length;
       this.parentElement.querySelector('.slider__items').dataset.index = index;
       slides[index].className = 'slider__item slider__item_showing';
-      console.log(index);
+      // console.log(index);
 
     })
 });

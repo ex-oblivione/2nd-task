@@ -145,4 +145,20 @@
       }
     }
   }
+
+  &__indicator {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+
+    &-item {
+      margin-left: 4px;
+      width: 8px;
+      height: 8px;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+  }
 }
