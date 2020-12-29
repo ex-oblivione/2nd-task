@@ -25,7 +25,12 @@ module.exports = {
   plugins: [
     // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.pug'
+      filename: 'index.html',
+      template: './src/pages/index.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search-room.html',
+      template: './src/pages/search-room.pug'
     }),
   ],
 
