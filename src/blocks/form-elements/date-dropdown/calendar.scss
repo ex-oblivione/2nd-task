@@ -939,3 +939,9 @@
   background: none;
   border: none;
 }
+
+@media (max-width: 350px) {
+  .datepicker.active {
+    width: 260px;
+  }
+}
