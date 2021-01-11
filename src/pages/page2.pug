@@ -12,3 +12,12 @@ html(lang='en')
   body
     h1 Страница 2
     a(href='./index.html') На главную
+    header.header-page
+      include ../blocks/header-footer/header.pug
+    main.index-page__main
+      .container
+        .index-page__find-room
+          include ../blocks/cards/find-room/find-room.pug
+        .index-page__subtitle
+    footer
+      include ../blocks/header-footer/footer.pug

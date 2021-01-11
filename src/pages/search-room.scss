@@ -1,0 +1,76 @@
+.search-room-page {
+  &__main {
+    padding: 30px 0 70px;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid $darkShade25;
+  }
+
+  &__sections {
+    display: flex;
+    width: 100%;
+  }
+
+  &__filters {
+    width: 325px;
+    padding: 0 60px 0 0;
+    box-sizing: border-box;
+  }
+
+  &__dates {
+    padding-bottom: 5px;
+  }
+
+  &__guests {
+    padding: 20px 0 5px;
+  }
+
+  &__range-slider {
+    padding: 30px 0;
+
+    &-caption {
+      display: inline-block;
+      padding-top: 11px;
+      font-size: 12px;
+      line-height: 12px;
+      color: $darkShade50;
+    }
+  }
+
+  &__rules {
+    width: 222px;
+    padding-bottom: 31px;
+  }
+
+  &__accessibility {
+    padding-bottom: 30px;
+  }
+
+  &__comfort {
+    padding-bottom: 5px;
+  }
+
+  &__add-comfort {
+    padding-top: 25px;
+  }
+
+  &__rooms {
+    flex: 1;
+  }
+
+  &__rooms-title {
+    margin-bottom: 20px;
+  }
+
+  &__rooms-list {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+
+  &__paginator {
+    margin: 40px auto 0;
+    width: max-content;
+  }
+}

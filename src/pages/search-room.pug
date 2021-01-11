@@ -1,1 +1,61 @@
-a(href='./index.html') На главную 
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    //- Разобраться с подключением 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+
+
+  body
+    header.header-page
+      include ../blocks/header-footer/header
+    main.search-room-page__main
+      .container
+        .search-room-page__sections
+          .search-room-page__filters
+            p.search-room-page__dates.text-style-litle ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ
+            include  ../blocks/form-elements/filter-date-dropdown/filter-date-dropdown
+            p.search-room-page__guests.text-style-litle ГОСТИ
+            include ../blocks/form-elements/dropdown/dropdown
+            .search-room-page__range-slider
+              include ../blocks/form-elements/range-slider/range-slider
+              span.search-room-page__range-slider-caption Стоимость за сутки пребывания в номере
+            .search-room-page__rules
+              include ../blocks/form-elements/checkbox-buttons/checkbox-buttons
+            .search-room-page__accessibility
+              include ../blocks/form-elements/accessibility-checkbox/accessibility-checkbox
+            p.search-room-page__comfort.text-style-litle УДОБСТВА НОМЕРА
+              include ../blocks/form-elements/dropdown-room/dropdown-room
+            .search-room-page__add-comfort
+
+            include ../blocks/form-elements/expand-checkbox-list/expand-checkbox-list
+
+              //- src\blocks\form-elements\expand-checkbox-list\expand-checkbox-list.pug
+
+            //- D:\Programming\2nd-task\src\blocks\form-elements\dropdown-room\dropdown-room.pug
+
+
+          include ../blocks/form-elements/room-slider/room-slider
+          .search-room-page__rooms
+            .search-room-page__rooms-title.text-style-big Номера, которые мы для вас подобрали
+            ul.search-room-page__rooms-list
+              li
+                +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145 })
+              li
+                +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145, star5: 'star_border' })
+              li
+                +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145, star5: 'star_border' })
+              li
+                +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145, star5: 'star_border' })
+              li
+                +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145, star5: 'star_border' })
+              li
+                +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145, star5: 'star_border' })
+            .search-room-page__paginator
+              include ../blocks/form-elements/paginator/paginator
+
+    footer
+      include ../blocks/header-footer/footer.pug

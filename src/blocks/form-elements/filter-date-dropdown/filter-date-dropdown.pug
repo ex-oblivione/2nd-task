@@ -1,7 +1,15 @@
 .filter-date-dropdown
-  .filter-date-dropdown__btn.filter-date-dropdown-mask(
+  //- .filter-date-dropdown__btn.filter-date-dropdown-mask(
+  //-   type='text'
+  //- )
+  //-   //- Дата берется из календаря, который будет потом прописан.
+  //-   span.filter-date-dropdown__placeholder 19 авг - 23 авг
+  //-   span.filter-date-dropdown__expand-symbol expand_more
+  input.filter-date-dropdown__input.filter-date-dropdown-mask(
     type='text'
+    class="datepicker-here"
+    data-date-format="d M"
+    data-multiple-dates-separator=" - "
+    readonly
   )
-    //- Дата берется из календаря, который будет потом прописан.
-    span.filter-date-dropdown__placeholder 19 авг - 23 авг
-    span.filter-date-dropdown__expand-symbol expand_more
+  span.filter-date-dropdown__expand-symbol expand_more
