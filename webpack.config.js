@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development';
+const webpack = require('webpack');
 console.log("isDev: ", isDev)
 console.log('NODE_ENV', process.env.NODE_ENV)
 // Константа path встроена в node(?!).
@@ -32,6 +33,11 @@ module.exports = {
       filename: 'search-room.html',
       template: './src/pages/search-room.pug'
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+
   ],
 
   module: {
