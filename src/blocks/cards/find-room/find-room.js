@@ -12,6 +12,7 @@ $('#end_one').on('click', function () {
 });
 
 // Скрыть календарь при нажании кнопки Применить (бывшая - Сегодня)
-$('[data-action="today"]').on('click', function () {
-  $('#start_one').data('datepicker').hide();
-});
+// Закомментировал, поскольку реализовал эту функцию в кода самого календаря
+// $('[data-action="today"]').on('click', function () {
+//   $('#start_one').data('datepicker').hide();
+// });

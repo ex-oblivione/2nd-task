@@ -597,6 +597,8 @@
         this.silent = false;
         // При нажатии на Применить (бывшая кнопка - Сегодня), не происходит переключение на сегодняшнюю дату
         // this.date = new Date();
+        // При нажатии на Применить (бывшая кнопка - Сегодня), скрывается календарь
+        this.hide();
 
         if (this.opts.todayButton instanceof Date) {
           this.selectDate(this.opts.todayButton)
