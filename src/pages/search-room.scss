@@ -1,5 +1,6 @@
 .search-room-page {
   &__main {
+    display: block;
     padding: 30px 0 70px;
     position: relative;
     box-sizing: border-box;
@@ -12,9 +13,13 @@
   }
 
   &__filters {
+    display: block;
+    box-sizing: border-box;
     width: 325px;
+    // width: 100px;
     padding: 0 60px 0 0;
     box-sizing: border-box;
+    background-color: white;
   }
 
   &__dates {
@@ -72,5 +77,63 @@
   &__paginator {
     margin: 40px auto 0;
     width: max-content;
+  }
+
+  &__filter-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 638px) {
+  .search-room-page__filters {
+    display: none;
+  }
+
+  .search-room-page__filters_visible {
+    position: fixed;
+    display: block;
+    z-index: 20;
+    box-shadow: -20px 0px white, 0px -35px white, -20px -20px white,
+      0px 0px 25px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    height: calc(100% - 100px);
+  }
+
+  .search-room-page__rooms.lock {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .search-room-page__filter-btn {
+    font-family: "Material Icons";
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 20%;
+    left: 0;
+    width: 33px;
+    height: 36px;
+    border-radius: 0 15px 15px 0;
+    background-color: $green;
+    color: white;
+    position: fixed;
+    z-index: 25;
+    font-size: 27px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 360px) {
+  .search-room-page__filters {
+    width: 290px;
+    padding: 0 20px 0 0;
+  }
+  // .room-slider {
+  //   width: 270px;
+  // }
+  .search-room-page__rooms-list {
+    // width: 270px;
+    margin: 0;
+    // column-gap: 12px;
   }
 }

@@ -11,7 +11,7 @@ html(lang='en')
 
   body
     header.header-page
-      include ../blocks/header-footer/header
+      include ../blocks/header-footer/header.pug
     main.search-room-page__main
       .container
         .search-room-page__sections
@@ -33,11 +33,6 @@ html(lang='en')
 
             include ../blocks/form-elements/expand-checkbox-list/expand-checkbox-list
 
-              //- src\blocks\form-elements\expand-checkbox-list\expand-checkbox-list.pug
-
-            //- D:\Programming\2nd-task\src\blocks\form-elements\dropdown-room\dropdown-room.pug
-
-
           include ../blocks/form-elements/room-slider/room-slider
           .search-room-page__rooms
             .search-room-page__rooms-title.text-style-big Номера, которые мы для вас подобрали
@@ -57,5 +52,7 @@ html(lang='en')
             .search-room-page__paginator
               include ../blocks/form-elements/paginator/paginator
 
+        .search-room-page__filter-btn.text-style-big list
+
     footer
-      include ../blocks/header-footer/footer.pug
+      include ../blocks/header-footer/footer
