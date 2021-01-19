@@ -1,0 +1,163 @@
+.room-describe {
+  &__galery {
+    max-width: 1440px;
+    // width: 100vw;
+    // min-width: 100vw;
+    margin: 0 auto;
+    height: 485px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &-img {
+      object-fit: cover;
+      height: 50%;
+      width: 33.33333%;
+
+      &_big {
+        height: 100%;
+        width: 66.66667%;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 70px 0 70px;
+    display: flex;
+    // flex-wrap: wrap;
+  }
+
+  &__column {
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  &__column:first-child {
+    margin-right: 70px;
+    max-width: 710px;
+  }
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-column {
+      flex: 1;
+      margin-bottom: 35px;
+      min-width: 250px;
+
+      &_rules {
+        // Не работает
+        // margin-right: 70px;
+        max-width: 260px;
+      }
+    }
+
+    &-column:first-child {
+      margin-right: 12px;
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      &-left {
+        font-family: Montserrat-Regular;
+        font-size: 14px;
+        color: $darkShade50;
+        padding-left: 35px;
+        // font-weight: normal;
+      }
+    }
+  }
+
+  &__comment-item {
+    margin-bottom: 22px;
+  }
+
+  &__rules {
+    padding-left: 20px;
+  }
+}
+
+.pie-chart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  &__round {
+    position: relative;
+    margin-right: 26px;
+  }
+
+  &__chart {
+    display: block;
+  }
+
+  &__title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $purple;
+
+    &-text {
+      color: inherit;
+    }
+  }
+
+  &__list {
+    margin-top: 10px;
+
+    &-item {
+      position: relative;
+      padding-left: 15px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      &:nth-of-type(1)::before {
+        background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+      }
+      &:nth-of-type(2)::before {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      }
+      &:nth-of-type(3)::before {
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      }
+      &:nth-of-type(4)::before {
+        background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .room-describe__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .room-describe__galery {
+    height: 250px;
+  }
+}
+
+@media (max-width: 450px) {
+  .room-describe__galery {
+    height: 150px;
+  }
+}

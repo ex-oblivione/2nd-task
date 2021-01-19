@@ -33,6 +33,10 @@ module.exports = {
       filename: 'search-room.html',
       template: './src/pages/search-room.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'room-describe.html',
+      template: './src/pages/room-describe.pug'
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

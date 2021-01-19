@@ -1,0 +1,80 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  body
+    header.header-page
+      include ../blocks/header-footer/header.pug
+    main.room-describe
+      .room-describe__galery
+        img.room-describe__galery-img.room-describe__galery-img_big(
+          src="./assets/images/room12.svg"
+          alt=''
+        )
+        img.room-describe__galery-img(
+          src="./assets/images/room13.jpg"
+          alt=''
+        )
+        img.room-describe__galery-img(
+          src="./assets/images/room14.jpg"
+          alt=''
+        )
+      .container
+        .room-describe__content
+          .room-describe__column
+            .room-describe__section
+              .room-describe__section-column
+                .text-style-middle.room-describe__section-title Сведения о номере
+                include ../blocks/form-elements/room-info/room-info.pug
+              .room-describe__section-column
+                .text-style-middle.room-describe__section-title Впечатления от номера
+                .pie-chart
+                  .pie-chart__round
+                    svg(class="pie-chart__chart" width="124" height="124" viewBox="0 0 34 34" fill="none" stroke-width="1")
+                      defs
+                        linearGradient(id="satisfactorily" x1="0%" y1="0%" x2="0%" y2="100%")
+                          stop(offset="0%" stop-color="#BC9CFF")
+                          stop(offset="100%" stop-color="#8BA4F9")
+                        linearGradient(id="good" x1="0%" y1="0%" x2="100%" y2="0%")
+                          stop(offset="0%" stop-color="#66D2EA")
+                          stop(offset="100%" stop-color="#6FCF97")
+                        linearGradient(id="perfect" x1="0%" y1="0%" x2="0%" y2="100%")
+                          stop(offset="0%" stop-color="#FFE39C")
+                          stop(offset="100%" stop-color="#FFBA9C")
+                        linearGradient(id="bad" x1="0%" y1="0%" x2="0%" y2="100%")
+                          stop(offset="0%" stop-color="#909090")
+                          stop(offset="100%" stop-color="#3D4975")
+                      circle(class="pie-chart__unit" r="15.9" stroke="url(#good)" stroke-dasharray="24.5 100" stroke-dashoffset="0" cx="50%" cy="50%")
+                      circle(class="pie-chart__unit" r="15.9" stroke="url(#perfect)" stroke-dasharray="49.5 100" stroke-dashoffset="-25" cx="50%" cy="50%")
+                      circle(class="pie-chart__unit" r="15.9" stroke="url(#satisfactorily)" stroke-dasharray="24.5 100" stroke-dashoffset="-75" cx="50%" cy="50%")
+                    p.pie-chart__title.text-style-big 260
+                      span.pie-chart__title-text.text-style-litle ГОЛОСОВ
+                  ul.pie-chart__list
+                    li.pie-chart__list-item Великолепно
+                    li.pie-chart__list-item Хорошо
+                    li.pie-chart__list-item Удовлетворительно
+                    li.pie-chart__list-item Разочарован
+            .room-describe__section
+              .room-describe__section-column
+                .text-style-middle.room-describe__section-title Отзывы посетителей номера
+                  span.room-describe__section-title-left 2&nbsp;отзыва
+                include ../blocks/form-elements/comment/comment
+                ul.room-describe__comment-list
+                  li.room-describe__comment-item
+                    +comment({avatar: './assets/images/avatar-murad.jpg', checked: true, likes: 12, name: 'Мурад Сарафанов', date: '5 дней назад', 'comment-text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+                  li.room-describe__comment-item
+                    +comment({avatar: './assets/images/avatar-patrisia.jpg', likes: 2, name: 'Патрисия Стёклышкова', date: 'неделю назад', 'comment-text': 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+            .room-describe__section
+              .room-describe__section-column
+                .text-style-middle.room-describe__section-title.room-describe__rules Правила
+                .room-describe__section-column_rules 
+                  include ../blocks/form-elements/bullet-list/bullet-list
+              .room-describe__section-column
+                .text-style-middle.room-describe__section-title Отмена
+                p.room-describe__cancel Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          .room-describe__column
+            include ../blocks/cards/room-description/room-description.pug
+    footer
+      include ../blocks/header-footer/footer.pug

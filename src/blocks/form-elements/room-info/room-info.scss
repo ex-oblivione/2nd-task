@@ -1,9 +1,11 @@
 .room-info {
-  max-width: 291px;
+  max-width: 280px;
+  width: 100%;
 
   &__item {
     padding: 19px 17px 19px 0;
     border-top: 1px solid rgba(31, 32, 65, 0.1);
+    box-sizing: border-box;
 
     &:first-child {
       border-top: none;
@@ -42,8 +44,4 @@
   &__elem-title {
     font-weight: bold;
   }
-}
-
-.asd {
-  margin: 40px;
 }
