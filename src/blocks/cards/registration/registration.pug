@@ -1,3 +1,5 @@
+include ../../form-elements/text-field/text-field.pug
+
 .registration.card-container
   p.registration__title.text-style-big Регистрация аккаунта
   .registration__name-form
@@ -8,7 +10,14 @@
     include ../../form-elements/radio-buttons/radio-buttons.pug
   .registration__birth-date
     p.registration__subtitle.text-style-litle ДАТА РОЖДЕНИЯ
-    include ../../form-elements/masked-text-field/masked-text-field.pug
+    //- include ../../form-elements/masked-text-field/masked-text-field.pug
+    .date-dropdown
+      input.date-dropdown__input.date-dropdown-mask.date-dropdown_registration(
+        type='text'
+        class="datepicker-here"
+        data-range="false"
+        data-min-date='false'
+      )
   p.registration__subtitle.text-style-litle ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС
   .registration__name-form
     +text-field({placeholder: 'Email'})

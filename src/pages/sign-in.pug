@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  body
+    header.header-page
+      include ../blocks/header-footer/header.pug
+    main.sign-in-page__main
+      .container_registration-sign-in
+        include ../blocks/cards/login/login.pug
+    footer
+      include ../blocks/header-footer/footer.pug

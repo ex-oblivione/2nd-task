@@ -37,6 +37,14 @@ module.exports = {
       filename: 'room-describe.html',
       template: './src/pages/room-describe.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'registration.html',
+      template: './src/pages/registration.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'sign-in.html',
+      template: './src/pages/sign-in.pug'
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

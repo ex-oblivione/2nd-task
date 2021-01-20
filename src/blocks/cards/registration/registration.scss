@@ -33,3 +33,7 @@
     justify-content: space-between;
   }
 }
+
+.date-dropdown_registration::placeholder {
+  color: $darkShade25;
+}

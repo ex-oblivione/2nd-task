@@ -9,6 +9,7 @@
 .radio {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   &__input {
     display: none;
