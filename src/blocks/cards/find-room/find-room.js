@@ -10,9 +10,3 @@ $('#start_one').datepicker({
 $('#end_one').on('click', function () {
   $('#start_one').data('datepicker').show();
 });
-
-// Скрыть календарь при нажании кнопки Применить (бывшая - Сегодня)
-// Закомментировал, поскольку реализовал эту функцию в кода самого календаря
-// $('[data-action="today"]').on('click', function () {
-//   $('#start_one').data('datepicker').hide();
-// });

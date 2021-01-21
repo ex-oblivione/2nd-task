@@ -3,12 +3,21 @@ html(lang='en')
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    //- script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
-    //- Разобраться с подключением 
-    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js")
-
 
   body
+    header.header-page
+      include ../../blocks/header-footer/header.pug
+    main.index-page__main
+      .container.container_index-pag
+        .index-page__find-room
+          include ../../blocks/cards/find-room/find-room.pug
+        .index-page__subtitle
+          p.index-page__subtitle-text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    footer
+      include ../../blocks/header-footer/footer.pug
+    
+    
+    //- Для отображения всех элементов на странице
     //- include ../blocks/form-elements/logo-main-page-link/main-page-link.pug
     //- include ../blocks/form-elements/text-field/text-field
     //- include ../blocks/form-elements/masked-text-field/masked-text-field
@@ -41,14 +50,3 @@ html(lang='en')
     //- include ../blocks/form-elements/room-slider/room-slider
     //- include ../blocks/cards/room-description/room-description
     //- include ../blocks/cards/login/login
-    
-    header.header-page
-      include ../blocks/header-footer/header.pug
-    main.index-page__main
-      .container.container_index-pag
-        .index-page__find-room
-          include ../blocks/cards/find-room/find-room.pug
-        .index-page__subtitle
-          p.index-page__subtitle-text Лучшие номера для вашей работы, отдыха и просто вдохновения
-    footer
-      include ../blocks/header-footer/footer.pug

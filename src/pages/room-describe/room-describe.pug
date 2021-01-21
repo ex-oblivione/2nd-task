@@ -6,7 +6,7 @@ html(lang='en')
 
   body
     header.header-page
-      include ../blocks/header-footer/header.pug
+      include ../../blocks/header-footer/header.pug
     main.room-describe
       .room-describe__galery
         img.room-describe__galery-img.room-describe__galery-img_big(
@@ -27,7 +27,7 @@ html(lang='en')
             .room-describe__section
               .room-describe__section-column
                 .text-style-middle.room-describe__section-title Сведения о номере
-                include ../blocks/form-elements/room-info/room-info.pug
+                include ../../blocks/form-elements/room-info/room-info.pug
               .room-describe__section-column
                 .text-style-middle.room-describe__section-title Впечатления от номера
                 .pie-chart
@@ -60,7 +60,7 @@ html(lang='en')
               .room-describe__section-column
                 .text-style-middle.room-describe__section-title Отзывы посетителей номера
                   span.room-describe__section-title-left 2&nbsp;отзыва
-                include ../blocks/form-elements/comment/comment
+                include ../../blocks/form-elements/comment/comment
                 ul.room-describe__comment-list
                   li.room-describe__comment-item
                     +comment({avatar: './assets/images/avatar-murad.jpg', checked: true, likes: 12, name: 'Мурад Сарафанов', date: '5 дней назад', 'comment-text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
@@ -70,11 +70,11 @@ html(lang='en')
               .room-describe__section-column
                 .text-style-middle.room-describe__section-title.room-describe__rules Правила
                 .room-describe__section-column_rules 
-                  include ../blocks/form-elements/bullet-list/bullet-list
+                  include ../../blocks/form-elements/bullet-list/bullet-list
               .room-describe__section-column.room-describe__cancel
                 .text-style-middle.room-describe__section-title Отмена
                 p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
           .room-describe__column
-            include ../blocks/cards/room-description/room-description.pug
+            include ../../blocks/cards/room-description/room-description.pug
     footer
-      include ../blocks/header-footer/footer.pug
+      include ../../blocks/header-footer/footer.pug

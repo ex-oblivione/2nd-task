@@ -1,35 +1,3 @@
-//- .room-slider
-//-   .slider
-//-     .slider__wrapper
-//-       .slider__items
-//-         .slider__item
-//-           img.img-fluid(src="./assets/images/room1.jpg")
-//-         .slider__item
-//-           img.img-fluid(src="./assets/images/room2.jpg")
-//-         .slider__item
-//-           img.img-fluid(src="./assets/images/room3.jpg")
-//-         .slider__item
-//-           img.img-fluid(src="./assets/images/room4.jpg")
-//-     a.slider__control.slider__control_prev(href="#" role="button")
-//-     a.slider__control.slider__control_next(href="#" role="button")
-//-   .room-slider__description
-//-     .room-slider__description-section
-//-       .room-slider__description-title № 
-//-         span.room-slider__description-num 888 
-//-         span.room-slider__description-lux.text-style-litle ЛЮКС
-//-       .room-slider__description-price
-//-         span.room-slider__description-money 9 990₽ 
-//-         span.room-slider__description-day в сутки
-//-     .room-slider__description-section
-//-       .room-slider__rate 
-//-         span.room-slider__rate-star star
-//-         span.room-slider__rate-star star
-//-         span.room-slider__rate-star star
-//-         span.room-slider__rate-star star
-//-         span.room-slider__rate-star star
-//-       .room-slider__comments
-//-         span.room-slider__comments-num 145 
-//-         span.room-slider__comments-text Отзывов
 mixin room-slider(options)
   .room-slider
     .slider
@@ -63,5 +31,3 @@ mixin room-slider(options)
         .room-slider__comments
           span.room-slider__comments-num= options['comments-num']
           span.room-slider__comments-text  Отзывов
-
-//- +room-slider({'img-src1': './assets/images/room1.jpg', 'img-src2': './assets/images/room2.jpg', 'img-src3': './assets/images/room3.jpg', 'img-src4': './assets/images/room4.jpg', 'room-num': 888, lux: ' ЛЮКС', money: '9 990₽ ', 'comments-num': 145 })

@@ -27,23 +27,23 @@ module.exports = {
     // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/pages/index.pug'
+      template: './src/pages/index/index.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'search-room.html',
-      template: './src/pages/search-room.pug'
+      template: './src/pages/search-room/search-room.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'room-describe.html',
-      template: './src/pages/room-describe.pug'
+      template: './src/pages/room-describe/room-describe.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'registration.html',
-      template: './src/pages/registration.pug'
+      template: './src/pages/registration/registration.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'sign-in.html',
-      template: './src/pages/sign-in.pug'
+      template: './src/pages/sign-in/sign-in.pug'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
