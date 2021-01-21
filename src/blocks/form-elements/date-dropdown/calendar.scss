@@ -941,9 +941,8 @@
   border: none;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .datepicker.active {
-    // max-width: 320px;
-    width: calc(100% - 60px);
+    width: 260px;
   }
 }
