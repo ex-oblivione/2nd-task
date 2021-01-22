@@ -3,6 +3,7 @@ mixin checkbox-btn(options)
     label.checkbox
       input.checkbox__input(
         type='checkbox'
+        checked= options.checked || false
       )
       .checkbox__box
         .checkbox__mark

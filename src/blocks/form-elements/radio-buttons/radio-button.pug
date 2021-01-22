@@ -3,6 +3,7 @@ mixin radio-btn(options)
     input.radio__input(
       type='radio'
       name= options.name || 'default-name'
+      checked= options.checked || false
     )
     span.radio__btn
     span.text= options.text || 'value'

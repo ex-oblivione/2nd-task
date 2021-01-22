@@ -1,7 +1,8 @@
 mixin rate-btn(option)
   input.rating-buttons__input(
     type='radio'
-    name='star'
+    name= option.name || 'star'
     id= option.id
+    checked= option.checked || false
   )
   label.rating-buttons__label(for= option.id)

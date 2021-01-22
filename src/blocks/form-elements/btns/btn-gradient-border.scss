@@ -8,6 +8,7 @@
   z-index: 1;
   cursor: pointer;
   user-select: none;
+  border: none;
 
   &__inner {
     content: "";
@@ -23,13 +24,15 @@
     border-radius: 20px;
     z-index: 2;
   }
-
-  &:hover {
+  &_focus,
+  &:hover,
+  &:focus {
     background: linear-gradient(
       180deg,
       rgba(188, 156, 255, 0.5) 0%,
       rgba(139, 164, 249, 0.5) 100%
     );
+    outline: none;
   }
 
   &__text {

@@ -1,0 +1,209 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  body
+    .ui-kit
+      .ui-kit__block
+        .ui-kit__fields-container
+          .ui-kit__item
+            .ui-kit__item-text
+              span.text-style-litle TEXT FIELD
+              span.ui-kit__item-right DEFAULT
+            include ../../blocks/form-elements/text-field/text-field
+            +text-field({placeholder: 'Email'})
+          .ui-kit__item
+            .ui-kit__item-text
+              span.text-style-litle TEXT FIELD
+              span.ui-kit__item-right HOVER / FOCUS
+            +text-field({focus: true, value: 'This is pretty awesome'})
+          .ui-kit__item
+            .ui-kit__item-text
+              p.text-style-litle DROPDOWN
+            include ../../blocks/form-elements/dropdown/dropdown
+          .ui-kit__item-tall
+            .ui-kit__item-text
+              p.text-style-litle MASKED TEXT FIELD
+            .date-dropdown
+              input.date-dropdown__input.date-dropdown-mask.date-dropdown_registration(
+                type='text'
+                class="datepicker-here"
+                data-range="false"
+                data-min-date='false'
+              )
+          .ui-kit__item-tall
+            .date-dropdown__container.ui-kit_date-dropdown
+              .date-dropdown__column
+                p.find-room__input.text-style-litle DATE DROPDOWN
+                .date-dropdown
+                  input.date-dropdown__input.date-dropdown-mask(
+                    type='text'
+                    class="datepicker-here"
+                    id='start_one'
+                    data-range="true"
+                    data-multiple-dates-separator="-"
+                    readonly
+                  )
+                  span.date-dropdown__expand-symbol expand_more
+          
+              .date-dropdown__column
+                p.find-room__input.text-style-litle DATE DROPDOWN
+                .date-dropdown
+                  input.date-dropdown__input.date-dropdown-mask(
+                    type='text'
+                    id='end_one'
+                    readonly
+                  )
+                  span.date-dropdown__expand-symbol expand_more
+          .ui-kit__item-tall
+            .ui-kit__item-text
+              p.text-style-litle FILTER DATE DROPDOWN
+            .filter-date-dropdown.ui-kit_filter-date-dropdown
+              input.filter-date-dropdown__input.filter-date-dropdown-mask(
+                placeholder='19 авг - 23 авг'
+                type='text'
+                class="datepicker-here"
+                data-date-format="d M"
+                data-multiple-dates-separator=" - "
+                readonly
+              )
+              span.filter-date-dropdown__expand-symbol expand_more
+          .ui-kit__item-tall
+            .ui-kit__item-text
+              p.text-style-litle SUBSCRIPTION TEXT FIELD
+            .subscription-field.ui-kit__subscription-field
+              input.subscription-field__placeholder(
+                type='text'
+                placeholder='Email'
+              )
+              span.subscription-field__arrow-symbol arrow_forward
+
+      .ui-kit__block
+        .ui-kit__item-tall
+          .ui-kit__checkbox-container
+            include ../../blocks/form-elements/checkbox-buttons/checkbox-item
+            .ui-kit__item-text_tall
+              p.text-style-litle CHECKBOX BUTTONS
+            +checkbox-btn({text: 'Можно курить'})
+            +checkbox-btn({text: 'Можно с питомцами', checked: true})
+            +checkbox-btn({text: 'Можно пригласить гостей (до 10 человек)', checked: true})
+        .ui-kit__item-tall
+          .ui-kit__item-text_tall
+            p.text-style-litle RADIO BUTTONS
+          include ../../blocks/form-elements/radio-buttons/radio-button
+          .radio-list
+            +radio-btn({'label-id': 'radio-first', name: 'name', text: 'Мужчина', checked: true})
+            +radio-btn({name: 'name', text: 'Женщина'})
+        .ui-kit__item-tall
+          .ui-kit__item-text_tall
+            p.text-style-litle TOGGLE
+          .ui-kit__toggle-container
+            label.toggle
+              input.toggle__input(
+                type="checkbox"
+                checked
+                )
+              span.toggle__switch
+              span.toggle__text Получать спецпредложения
+          label.toggle
+            input.toggle__input(
+              type="checkbox"
+              )
+            span.toggle__switch
+            span.toggle__text Получать спецпредложения
+        .ui-kit__item-tall
+          .ui-kit__item-text_tall
+            p.text-style-litle LIKE BUTTON
+          .ui-kit__like-container
+            label.like
+              input.like__input#like(
+                type='checkbox'
+              )
+              span.like__btn
+                span.material-icons#heart-unchecked favorite_border
+                span.material-icons#heart-checked favorite
+                span.like__counter 2
+          label.like
+            input.like__input#like(
+              type='checkbox'
+              checked
+            )
+            span.like__btn
+              span.material-icons#heart-unchecked favorite_border
+              span.material-icons#heart-checked favorite
+              span.like__counter 12
+        .ui-kit__item-tall
+          .ui-kit__item-text_tall
+            p.text-style-litle RATE BUTTON
+          include ../../blocks/form-elements/rate-button/rate-button-mixin
+          .ui-kit__rating-container
+            .rating-buttons
+              +rate-btn({id: 'star1', name: 'star1'})
+              +rate-btn({id: 'star2', name: 'star1', checked: true})
+              +rate-btn({id: 'star3', name: 'star1'})
+              +rate-btn({id: 'star4', name: 'star1'})
+              +rate-btn({id: 'star5', name: 'star1'})
+          .rating-buttons
+            +rate-btn({id: 'star6', name: 'star2', checked: true})
+            +rate-btn({id: 'star7', name: 'star2'})
+            +rate-btn({id: 'star8', name: 'star2'})
+            +rate-btn({id: 'star9', name: 'star2'})
+            +rate-btn({id: 'star10', name: 'star2'})
+
+      .ui-kit__block
+        .ui-kit__item-tall
+          .ui-kit__range-container
+            .range-slider
+              .range-slider__text
+                span.range-slider__title.text-style-litle RANGE SLIDER
+                .range-slider__text-price
+                  span.range-slider__text-price-from
+                  span  - 
+                  span.range-slider__text-price-to
+              input.range-slider__input(
+                type="text" 
+                name="my_range" 
+                value=""
+                )
+        .ui-kit__item-tall
+          .ui-kit__item-text_tall
+            p.text-style-litle BUTTONS
+          .ui-kit__btn-container
+            .ui-kit__btn-item
+              button.btn-gradient
+                span.btn-gradient__text.text-style-litle click me
+            button.btn-gradient.btn-gradient_focus
+              span.btn-gradient__text.text-style-litle click me
+          .ui-kit__btn-container
+            .ui-kit__btn-item
+              button.btn-gradient-border
+                .btn-gradient-border__inner
+                  span.btn-gradient-border__text.text-style-litle click me
+            button.btn-gradient-border.btn-gradient-border_focus
+              .btn-gradient-border__inner
+                span.btn-gradient-border__text.text-style-litle click me
+          .ui-kit__btn-container
+            .ui-kit__btn-item
+              button.btn-text.text-style-litle click me
+            button.btn-text.btn-text_focus.text-style-litle click me
+          .ui-kit__item-tall
+            include ../../blocks/form-elements/btns/btn-gradient_wide
+          .ui-kit__item-text_tall
+            p.text-style-litle PAGINATION
+          include ../../blocks/form-elements/paginator/paginator
+
+
+
+
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block
+      .ui-kit__block

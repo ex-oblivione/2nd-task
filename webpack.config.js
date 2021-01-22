@@ -45,6 +45,10 @@ module.exports = {
       filename: 'sign-in.html',
       template: './src/pages/sign-in/sign-in.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'ui-kit.html',
+      template: './src/pages/ui-kit/ui-kit.pug'
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

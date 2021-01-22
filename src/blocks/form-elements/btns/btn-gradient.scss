@@ -11,13 +11,20 @@
   border-radius: 22px;
   cursor: pointer;
   user-select: none;
+  border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
+    outline: none;
   }
 
   &__text {
     position: relative;
     color: white;
+  }
+
+  &_focus {
+    opacity: 0.5;
   }
 }

@@ -1,0 +1,19 @@
+.btn-text {
+  position: relative;
+  color: $purple;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background: none;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    color: $darkShade50;
+    outline: none;
+  }
+
+  &_focus {
+    color: $darkShade50;
+  }
+}

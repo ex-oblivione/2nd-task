@@ -1,0 +1,111 @@
+.ui-kit {
+  padding: 65px 10px;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(250px, 374px) minmax(250px, 320px) minmax(
+      250px,
+      320px
+    );
+  column-gap: 72px;
+
+  &__block {
+    // background-color: lightblue;
+    width: 100%;
+    // Потом сделать значение по контенту
+    height: 650px;
+    margin-bottom: 20px;
+  }
+
+  &__fields-container {
+    max-width: 320px;
+  }
+
+  &__item {
+    margin-bottom: 22px;
+
+    &-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+
+      &_tall {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-right {
+      font-size: 12px;
+      line-height: 12px;
+      color: $darkShade50;
+    }
+
+    &-tall {
+      margin-bottom: 43px;
+    }
+  }
+
+  &_date-dropdown {
+    padding: 0;
+  }
+
+  &_filter-date-dropdown {
+    max-width: 266px;
+  }
+
+  &__subscription-field {
+    max-width: 266px;
+    width: 100%;
+  }
+
+  &__checkbox-container {
+    max-width: 222px;
+  }
+
+  &__toggle-container {
+    margin-bottom: 8px;
+  }
+
+  &__like-container {
+    display: inline;
+    margin-right: 7px;
+  }
+
+  &__rating-container {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  &__range-container {
+    max-width: 266px;
+  }
+
+  &__btn-container {
+    margin-bottom: 27px;
+  }
+
+  &__btn-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1178px) {
+  .ui-kit {
+    column-gap: 6.11%;
+  }
+}
+
+@media (max-width: 874px) {
+  .ui-kit {
+    grid-template-columns: minmax(250px, 374px) minmax(250px, 320px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 552px) {
+  .ui-kit {
+    grid-template-columns: minmax(250px, 374px);
+  }
+}

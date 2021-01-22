@@ -2,4 +2,6 @@ mixin text-field(options)
   input.text-field(
     type='text'
     placeholder= options.placeholder
+    autofocus= options.focus || false
+    value= options.value || false
   )
