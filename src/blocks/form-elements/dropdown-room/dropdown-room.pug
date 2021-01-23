@@ -1,9 +1,9 @@
 mixin dropdown-room(options)
   .dropdown-room
-    .dropdown-room__btn(class=options && options.class || '')
-      span.dropdown-room__placeholder  
+    .dropdown-room__btn(class= options.class || '')
+      span.dropdown-room__placeholder=  options.placeholder || ''
       span.dropdown-room__expand-symbol expand_more
-    .dropdown-room__content(class=options && options.class || '')
+    .dropdown-room__content(class= options.class || '' class= options['class-z-index'] || '')
       .dropdown-room__content-item
         span СПАЛЬНИ
         .dropdown-room__content-counter

@@ -1,26 +1,27 @@
-.dropdown
-  .dropdown__btn
-    span.dropdown__placeholder  
-    span.dropdown__expand-symbol expand_more
-  .dropdown__content
-    .dropdown__content-item
-      span ВЗРОСЛЫЕ
-      .dropdown__content-counter
-        span.dropdown__content-counter-btn(data-direction="minus") -
-        span.dropdown__content-counter-value 0
-        span.dropdown__content-counter-btn(data-direction="plus") +
-    .dropdown__content-item
-      span ДЕТИ
-      .dropdown__content-counter
-        span.dropdown__content-counter-btn(data-direction="minus") -
-        span.dropdown__content-counter-value 0
-        span.dropdown__content-counter-btn(data-direction="plus") +
-    .dropdown__content-item
-      span МЛАДЕНЦЫ
-      .dropdown__content-counter
-        span.dropdown__content-counter-btn(data-direction="minus") -
-        span.dropdown__content-counter-value 0
-        span.dropdown__content-counter-btn(data-direction="plus") +
-    .dropdown__bottom-item
-      span.dropdown__bottom-item-clear ОЧИСТИТЬ
-      span.dropdown__bottom-item-apply ПРИМЕНИТЬ
+mixin dropdown(options)
+  .dropdown
+    .dropdown__btn(class= options.class || '')
+      span.dropdown__placeholder=  options.placeholder || ''
+      span.dropdown__expand-symbol expand_more
+    .dropdown__content(class= options.class || '' class= options['class-z-index' || ''])
+      .dropdown__content-item
+        span ВЗРОСЛЫЕ
+        .dropdown__content-counter
+          span.dropdown__content-counter-btn(data-direction="minus") -
+          span.dropdown__content-counter-value= options['adult-num'] || 0
+          span.dropdown__content-counter-btn(data-direction="plus") +
+      .dropdown__content-item
+        span ДЕТИ
+        .dropdown__content-counter
+          span.dropdown__content-counter-btn(data-direction="minus") -
+          span.dropdown__content-counter-value= options['child-num'] || 0
+          span.dropdown__content-counter-btn(data-direction="plus") +
+      .dropdown__content-item
+        span МЛАДЕНЦЫ
+        .dropdown__content-counter
+          span.dropdown__content-counter-btn(data-direction="minus") -
+          span.dropdown__content-counter-value= options['infant-num'] || 0
+          span.dropdown__content-counter-btn(data-direction="plus") +
+      .dropdown__bottom-item
+        span.dropdown__bottom-item-clear ОЧИСТИТЬ
+        span.dropdown__bottom-item-apply ПРИМЕНИТЬ

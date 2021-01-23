@@ -1,5 +1,5 @@
 let dropdown = $('.dropdown');
-let placeholder = $('.dropdown__placeholder').text('Сколько гостей');
+let placeholder = $('.dropdown__placeholder:empty').text('Сколько гостей');
 
 $.each(dropdown, function () {
 

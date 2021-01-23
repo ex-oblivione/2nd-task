@@ -23,6 +23,7 @@ html(lang='en')
             .ui-kit__item-text
               p.text-style-litle DROPDOWN
             include ../../blocks/form-elements/dropdown/dropdown
+            +dropdown(true)
           .ui-kit__item-tall
             .ui-kit__item-text
               p.text-style-litle MASKED TEXT FIELD
@@ -47,7 +48,6 @@ html(lang='en')
                     readonly
                   )
                   span.date-dropdown__expand-symbol expand_more
-          
               .date-dropdown__column
                 p.find-room__input.text-style-litle DATE DROPDOWN
                 .date-dropdown
@@ -194,9 +194,6 @@ html(lang='en')
             p.text-style-litle PAGINATION
           include ../../blocks/form-elements/paginator/paginator
 
-
-
-
       .ui-kit__block
         .ui-kit__dropdown-container
           .ui-kit__item
@@ -204,14 +201,23 @@ html(lang='en')
               span.text-style-litle DROPDOWN
               span.ui-kit__item-right DEFAULT
             include ../../blocks/form-elements/dropdown-room/dropdown-room
-            +dropdown-room(true)
+            +dropdown-room({'class-z-index': 'dropdown-room__content_z-index-up',placeholder: '2 спальни, 2 кровати', 'bedroom-num': 2, 'bed-num': 2})
           .ui-kit__item
             .ui-kit__item-text
               span.text-style-litle DROPDOWN
               span.ui-kit__item-right EXPANDED
-            +dropdown-room({class: 'active-dropdown'})
+            +dropdown-room({class: 'active-dropdown', placeholder: '2 спальни, 2 кровати', 'bedroom-num': 2, 'bed-num': 2})
+
       .ui-kit__block
+        .ui-kit__item-text
+          span.text-style-litle DROPDOWN
+        +dropdown({class: 'active-dropdown', 'class-z-index': 'dropdown__content_z-index-up'})
+
       .ui-kit__block
+        .ui-kit__item-text
+          span.text-style-litle DROPDOWN
+        +dropdown({class: 'active-dropdown', placeholder: '3 гостя', 'adult-num': 2, 'child-num': 1})
+
       .ui-kit__block
       .ui-kit__block
       .ui-kit__block

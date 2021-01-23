@@ -50,6 +50,10 @@
     box-sizing: border-box;
     font-family: Montserrat-Bold;
     font-size: 12px;
+
+    &_z-index-up {
+      z-index: 12;
+    }
   }
 
   &__content.active-dropdown {
