@@ -8,13 +8,13 @@
       320px
     );
   column-gap: 72px;
+  row-gap: 28px;
 
   &__block {
     // background-color: lightblue;
     width: 100%;
     // Потом сделать значение по контенту
-    height: 650px;
-    margin-bottom: 20px;
+    height: min-content;
   }
 
   &__fields-container {
@@ -88,6 +88,10 @@
   &__btn-item {
     display: inline-block;
     margin-right: 20px;
+  }
+
+  &__dropdown-container {
+    max-width: 266px;
   }
 }
 

@@ -3,7 +3,7 @@ const dropdownRoomBtn = $('.dropdown-room__btn');
 const dropdownRoomContent = $('.dropdown-room__content');
 
 dropdownRoomBtn.click(function (event) {
-  dropdownRoom.toggleClass('active-dropdown');
+  $(this).parent().find(dropdownRoom).toggleClass('active-dropdown');
 });
 
 $(document).mouseup(function (e) {

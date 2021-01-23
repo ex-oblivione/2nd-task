@@ -1,23 +1,47 @@
-.dropdown-room
-  .dropdown-room__btn
-    span.dropdown-room__placeholder  
-    span.dropdown-room__expand-symbol expand_more
-  .dropdown-room__content
-    .dropdown-room__content-item
-      span СПАЛЬНИ
-      .dropdown-room__content-counter
-        span.dropdown-room__content-counter-btn(data-direction="minus") -
-        span.dropdown-room__content-counter-value 0
-        span.dropdown-room__content-counter-btn(data-direction="plus") +
-    .dropdown-room__content-item
-      span КРОВАТИ
-      .dropdown-room__content-counter
-        span.dropdown-room__content-counter-btn(data-direction="minus") -
-        span.dropdown-room__content-counter-value 0
-        span.dropdown-room__content-counter-btn(data-direction="plus") +
-    .dropdown-room__content-item
-      span ВАННЫЕ КОМНАТЫ
-      .dropdown-room__content-counter
-        span.dropdown-room__content-counter-btn(data-direction="minus") -
-        span.dropdown-room__content-counter-value 0
-        span.dropdown-room__content-counter-btn(data-direction="plus") +
+mixin dropdown-room(options)
+  .dropdown-room
+    .dropdown-room__btn(class=options && options.class || '')
+      span.dropdown-room__placeholder  
+      span.dropdown-room__expand-symbol expand_more
+    .dropdown-room__content(class=options && options.class || '')
+      .dropdown-room__content-item
+        span СПАЛЬНИ
+        .dropdown-room__content-counter
+          span.dropdown-room__content-counter-btn(data-direction="minus") -
+          span.dropdown-room__content-counter-value= options['bedroom-num'] || 0
+          span.dropdown-room__content-counter-btn(data-direction="plus") +
+      .dropdown-room__content-item
+        span КРОВАТИ
+        .dropdown-room__content-counter
+          span.dropdown-room__content-counter-btn(data-direction="minus") -
+          span.dropdown-room__content-counter-value= options['bed-num'] || 0
+          span.dropdown-room__content-counter-btn(data-direction="plus") +
+      .dropdown-room__content-item
+        span ВАННЫЕ КОМНАТЫ
+        .dropdown-room__content-counter
+          span.dropdown-room__content-counter-btn(data-direction="minus") -
+          span.dropdown-room__content-counter-value= options['bathroom-num'] || 0
+          span.dropdown-room__content-counter-btn(data-direction="plus") +
+//- .dropdown-room
+//-   .dropdown-room__btn
+//-     span.dropdown-room__placeholder  
+//-     span.dropdown-room__expand-symbol expand_more
+//-   .dropdown-room__content
+//-     .dropdown-room__content-item
+//-       span СПАЛЬНИ
+//-       .dropdown-room__content-counter
+//-         span.dropdown-room__content-counter-btn(data-direction="minus") -
+//-         span.dropdown-room__content-counter-value 0
+//-         span.dropdown-room__content-counter-btn(data-direction="plus") +
+//-     .dropdown-room__content-item
+//-       span КРОВАТИ
+//-       .dropdown-room__content-counter
+//-         span.dropdown-room__content-counter-btn(data-direction="minus") -
+//-         span.dropdown-room__content-counter-value 0
+//-         span.dropdown-room__content-counter-btn(data-direction="plus") +
+//-     .dropdown-room__content-item
+//-       span ВАННЫЕ КОМНАТЫ
+//-       .dropdown-room__content-counter
+//-         span.dropdown-room__content-counter-btn(data-direction="minus") -
+//-         span.dropdown-room__content-counter-value 0
+//-         span.dropdown-room__content-counter-btn(data-direction="plus") +

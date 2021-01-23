@@ -70,7 +70,7 @@ html(lang='en')
                 readonly
               )
               span.filter-date-dropdown__expand-symbol expand_more
-          .ui-kit__item-tall
+          .ui-kit__item
             .ui-kit__item-text
               p.text-style-litle SUBSCRIPTION TEXT FIELD
             .subscription-field.ui-kit__subscription-field
@@ -198,6 +198,18 @@ html(lang='en')
 
 
       .ui-kit__block
+        .ui-kit__dropdown-container
+          .ui-kit__item
+            .ui-kit__item-text
+              span.text-style-litle DROPDOWN
+              span.ui-kit__item-right DEFAULT
+            include ../../blocks/form-elements/dropdown-room/dropdown-room
+            +dropdown-room(true)
+          .ui-kit__item
+            .ui-kit__item-text
+              span.text-style-litle DROPDOWN
+              span.ui-kit__item-right EXPANDED
+            +dropdown-room({class: 'active-dropdown'})
       .ui-kit__block
       .ui-kit__block
       .ui-kit__block

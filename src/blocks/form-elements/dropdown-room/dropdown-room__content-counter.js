@@ -18,7 +18,7 @@ let counter = function () {
         value.textContent = newValue;
 
         // Создаем массив из всех счетчиков.
-        let valuesArr = Array.from(document.querySelectorAll('.dropdown-room__content-counter-value'));
+        let valuesArr = Array.from(this.parentElement.parentElement.parentElement.querySelectorAll('.dropdown-room__content-counter-value'));
 
 
         // Находим число спален, кроватей, ванных комнат.
@@ -103,7 +103,8 @@ let counter = function () {
 
 
         // Выводим получившуюся строку на страницу.
-        let counterPlaceholderText = document.body.querySelector('.dropdown-room__placeholder');
+        // let counterPlaceholderText = document.body.querySelector('.dropdown-room__placeholder');
+        let counterPlaceholderText = this.parentElement.parentElement.parentElement.parentElement.querySelector('.dropdown-room__placeholder')
         counterPlaceholderText.textContent = itemRoomText();
       })
   })
