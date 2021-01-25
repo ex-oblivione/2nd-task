@@ -221,11 +221,18 @@ html(lang='en')
       .ui-kit__block
         .ui-kit__expand-checkbox-list-container
           include ../../blocks/form-elements/expand-checkbox-list/expand-checkbox-list
-          +expand-checkbox-list({title: 'EXPANDABLE CHECKBOX LIST'})
-          +expand-checkbox-list({title: 'EXPANDABLE CHECKBOX LIST', class: 'active-checkbox-list', 'class-expand-symbol': 'active-checkbox-list'})
-          
+          .ui-kit__expand-checkbox-list-first
+            +expand-checkbox-list({title: 'EXPANDABLE CHECKBOX LIST'})
+          +expand-checkbox-list({title: 'EXPANDABLE CHECKBOX LIST', class: 'active-checkbox-list', 'class-expand-symbol': 'active-checkbox-list', 'checked-desk': true, 'checked-highchair': true, 'checked-crib': true})
+
       .ui-kit__block
+        include ../../blocks/form-elements/accessibility-checkbox/accessibility-checkbox
+        +accessibility('RICH CHECKBOX BUTTONS')
+
       .ui-kit__block
+        .ui-kit__bullet-list-container
+          .ui-kit__item-text_tall.text-style-litle BULLET LIST
+          include ../../blocks/form-elements/bullet-list/bullet-list.pug
       .ui-kit__block
       .ui-kit__block
       .ui-kit__block

@@ -99,6 +99,14 @@
   &__expand-checkbox-list-container {
     margin-bottom: 30px;
   }
+
+  &__expand-checkbox-list-first {
+    margin-bottom: 36px;
+  }
+
+  &__bullet-list-container {
+    max-width: 255px;
+  }
 }
 
 @media (max-width: 1178px) {
