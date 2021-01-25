@@ -5,7 +5,9 @@ html(lang='en')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
   body
-    .ui-kit
+    header.ui-kit__header
+      img.ui-kit__header-logo(src='./assets/images/logo-grey.svg' alt='Toxin logo')
+    main.ui-kit
       .ui-kit__block
         .ui-kit__fields-container
           .ui-kit__item
@@ -233,7 +235,22 @@ html(lang='en')
         .ui-kit__bullet-list-container
           .ui-kit__item-text_tall.text-style-litle BULLET LIST
           include ../../blocks/form-elements/bullet-list/bullet-list.pug
+
       .ui-kit__block
-      .ui-kit__block
-      .ui-kit__block
-      .ui-kit__block
+        ul.room-info
+          li.room-info__item
+            .room-info__elem
+              span.room-info__elem-icon insert_emoticon
+              .room-info__elem-text
+                p.room-info__elem-title Комфорт
+                p Шумопоглощающие стены
+          li.room-info__item.ui-kit__room-info-item
+            .room-info__elem
+              span.room-info__elem-icon location_city
+              .room-info__elem-text
+                p.room-info__elem-title Удобство
+                p Окно в каждой из спален
+
+      .ui-kit__block.ui-kit__block_wide
+        include ../../blocks/form-elements/comment/comment
+        +comment({avatar: './assets/images/avatar-murad.jpg', checked: true, likes: 12, name: 'Мурад Сарафанов', date: '5 дней назад', 'comment-text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})

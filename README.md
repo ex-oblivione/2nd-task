@@ -28,6 +28,7 @@ Website layout for booking hotels (it's a second task for FSD training course â€
 <br>
 
 GitHubPages
-https://ex-oblivione.github.io/2nd-task/dist/index.html
+https://ex-oblivione.github.io/2nd-task/dist/index.html <br>
+
 Ui kit
 https://ex-oblivione.github.io/2nd-task/dist/ui-kit.html

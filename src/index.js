@@ -1,5 +1,6 @@
 import './style.scss'
 import './assets/images/Logo.svg'
+import './assets/images/logo-grey.svg'
 import './assets/images/avatar-murad.jpg'
 import './assets/images/avatar-patrisia.jpg'
 import './assets/images/room1.jpg'

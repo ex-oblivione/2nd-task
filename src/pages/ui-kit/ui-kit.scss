@@ -10,11 +10,23 @@
   column-gap: 72px;
   row-gap: 28px;
 
+  &__header {
+    padding: 30px 0 0 30px;
+
+    &-logo {
+      display: block;
+    }
+  }
+
   &__block {
-    // background-color: lightblue;
     width: 100%;
-    // Потом сделать значение по контенту
     height: min-content;
+
+    &_wide {
+      margin-top: 11px;
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
   }
 
   &__fields-container {
@@ -97,7 +109,7 @@
   }
 
   &__expand-checkbox-list-container {
-    margin-bottom: 30px;
+    margin-bottom: 11px;
   }
 
   &__expand-checkbox-list-first {
@@ -106,6 +118,10 @@
 
   &__bullet-list-container {
     max-width: 255px;
+  }
+
+  &__room-info-item {
+    border-bottom: 1px solid $darkShade10;
   }
 }
 
@@ -120,10 +136,20 @@
     grid-template-columns: minmax(250px, 374px) minmax(250px, 320px);
     justify-content: center;
   }
+
+  .ui-kit__block_wide {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 @media (max-width: 552px) {
   .ui-kit {
     grid-template-columns: minmax(250px, 374px);
+  }
+
+  .ui-kit__block_wide {
+    grid-column-start: auto;
+    grid-column-end: auto;
   }
 }
