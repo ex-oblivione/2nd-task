@@ -1,11 +1,12 @@
-.expand-checkbox-list
-  .expand-checkbox-list__btn
-    span.text-style-litle ДОПОЛНИТЕЛЬНЫЕ УДОБСТВА
-    span.expand-checkbox-list__expand-symbol expand_more
-  .expand-checkbox-list__content
-    +checkbox-btn({text: 'Завтрак'})
-    +checkbox-btn({text: 'Письменный стол'})
-    +checkbox-btn({text: 'Стул для кормления'})
-    +checkbox-btn({text: 'Кроватка'})
-    +checkbox-btn({text: 'Телевизор'})
-    +checkbox-btn({text: 'Шампунь'})
+mixin expand-checkbox-list(options) 
+  .expand-checkbox-list
+    .expand-checkbox-list__btn
+      span.text-style-litle= options.title || 'ДОПОЛНИТЕЛЬНЫЕ УДОБСТВА'
+      span.expand-checkbox-list__expand-symbol(class= options['class-expand-symbol'] || '') expand_more
+    .expand-checkbox-list__content(class= options.class || '')
+      +checkbox-btn({text: 'Завтрак'})
+      +checkbox-btn({text: 'Письменный стол'})
+      +checkbox-btn({text: 'Стул для кормления'})
+      +checkbox-btn({text: 'Кроватка'})
+      +checkbox-btn({text: 'Телевизор'})
+      +checkbox-btn({text: 'Шампунь'})

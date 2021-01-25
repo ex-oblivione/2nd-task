@@ -219,6 +219,11 @@ html(lang='en')
         +dropdown({class: 'active-dropdown', placeholder: '3 гостя', 'adult-num': 2, 'child-num': 1})
 
       .ui-kit__block
+        .ui-kit__expand-checkbox-list-container
+          include ../../blocks/form-elements/expand-checkbox-list/expand-checkbox-list
+          +expand-checkbox-list({title: 'EXPANDABLE CHECKBOX LIST'})
+          +expand-checkbox-list({title: 'EXPANDABLE CHECKBOX LIST', class: 'active-checkbox-list', 'class-expand-symbol': 'active-checkbox-list'})
+          
       .ui-kit__block
       .ui-kit__block
       .ui-kit__block
